@@ -1,0 +1,357 @@
+	<html>
+	<head><link rel="shortcut icon" href="bitbug_favicon.ico" /> </head>
+	<title>用我炙热的感情感动你好吗？</title>
+	<meta charset="UTF-8">
+	<script src="jquery-3.2.1.min.js">
+</script>
+	
+	<style>
+	#zhihu {
+  	 position: absolute;
+	 top: 5%;
+	 width: 260px;
+     height: 70px;
+     left: 50%;
+	     -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+	
+    }
+	*{
+		margin: 0;
+		padding: 0;
+		}
+	body{
+		overflow: hidden;
+		width:auto;
+		high:5000px;
+		
+		}
+	#myCanvas{
+		border: 1px;
+		background-color:#f7fafc;
+		}
+	.a {
+	
+		text-decoration:none;
+		text-align: center;
+		font-weight: bold;
+		font-size: 17px;
+		color: #787878;
+		font-family: "Comic Sans MS", cursive;
+		text-decoration:none; 
+	}
+	#word
+	{
+	 position: absolute;
+	 font-family: "微软雅黑";color: #666666;
+	 top: 14%;
+        left: 50%;
+		           -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+	font-size: 20px;
+	font-family: "Comic Sans MS", cursive;
+	}
+	.text{
+	border:solid 2px #ccc;
+	width:400px;
+	height:40px;
+	background:url(ok.png) no-repeat 0 center;
+    }
+	.text input{
+	float:left;
+	border:none;
+	background:none;
+	height:40px;
+	line-height:30px;
+	width:100%; 
+	text-indent:32px;
+	}
+.icon{
+   
+    width: 300px;
+    height: 50px;
+    border-radius:0px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 1px 1px 3px #cccccc;
+    padding-left: 10px;
+    margin-right: 10px;
+	text-indent:32px;
+	background:white;
+	 background: url("ok.png")no-repeat 10px ;
+}
+
+
+
+#register{
+   position: absolute;
+        top: 55%;
+        left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+		
+}
+
+
+#login
+{   position: absolute;
+    top: 55%;
+        left: 50%;
+        
+    -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+		display:none;
+}
+
+#lr{
+   position: absolute;
+        top: 24%;
+        left: 50%;
+        
+    -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+		font-family: "微软雅黑";color: #666666;
+		font-size: 20px;
+}
+.button {
+    background-color: #0f88eb; /* Green */
+    border: none;
+	border-radius: 5px;
+    color: white;
+    padding: 13px 118px;
+    text-align: center;
+    text-decoration: none;
+	text-color:white;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button2 {
+	padding: 12px 100px;
+    background-color: transparent; 
+	
+    color: #3366ff; 
+    border: 2px solid #c7def3;
+}
+.button3 {
+padding: 14px 133px;
+   
+
+}
+
+
+.button1:hover {
+   opacity: 0.7;
+    box-shadow:
+	0 12px 16px 0 rgba(0,0,0,0.24),
+	0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button3:hover {
+
+    box-shadow:
+	0 12px 16px 0 rgba(0,0,0,0.24),
+	0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+#show1{
+
+}
+
+#show1:hover{
+opacity: 0.7;
+
+}
+#show2:hover{
+opacity: 0.7;
+}
+#image:hover {
+	opacity: 0.7;
+
+
+}<!--不透明°---->
+
+</style>
+<style>
+.important
+{
+ padding-bottom:5px;
+ font-family: "微软雅黑";
+ color: #666666;
+ font-size: 20px;
+ border-bottom:3px solid #0f88eb; 
+ color:#0f88eb
+}
+.show1{
+ padding-bottom:5px;
+ font-family: "微软雅黑";
+ color: #666666;
+ font-size: 20px;
+ border-bottom:3px solid #0f88eb; 
+ color:#0f88eb
+}
+#show3{
+
+position:relative;
+left:120px;
+top:-25px;
+display:none;
+}
+#bottom{
+ position: absolute;
+        top: 95%;
+        left: 50%;
+        
+    -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+		font-family: "微软雅黑";
+		color: #C0C0C0;
+		font-size: 1px;
+
+}
+
+#xiazai{
+
+	padding:15px 105px 15px 105px;
+	border:1px solid #55abed;
+	}
+.ui-dialog{ 
+		width: 300px;height: auto;
+		display: none;
+		position: absolute;z-index: 9000;
+		top: 0px;left: 19px;
+		border: 1px solid #D5D5D5;background:#19e64dff;//透明背景
+	}
+
+input{
+outline:medium;
+
+
+}
+</style>
+	<script src="jquery-3.2.1.min.js">
+</script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+$("#show1").click(function(){
+
+    $("#register").show("fast");<!--点击show1出现login的界面-->
+	$("#login").hide("fast")
+	 $("#show1").toggleClass("important")
+	  $("#show2").removeClass("important")
+
+  });
+  
+  $("#show2").click(function(){
+    $("#login").show("fast");<!--点击show2出现login2的界面-->
+	$("#register").hide("fast");
+	$("#show2").toggleClass("important")
+	$("#show1").removeClass("important show1")
+  });
+  $("#qq").click(function(){
+
+   $("#show3").slideToggle("fast");
+
+  });
+  $("#b2").click(function(){
+
+   $("#show4").slideToggle("fast");
+
+  });
+    $("#b3").click(function(){
+
+   $("#show5").slideToggle("fast");
+
+  });
+});
+</script>
+<script type="text/javascript"   src="tanchu.js" charset="utf-8">//实现按钮点击进去微信的验证码
+</script>
+	</head>
+	<body style="height:3000px;">
+
+<img src="zhihu.gif"  id="zhihu" alt="我是图片哦!"/> <!--1:3比例-->
+<p id="word">与世界分享你的知识、经验和见解</p>
+<div id="lr" >
+<span id="show1" class="show1">注册</span> 
+ &nbsp &nbsp
+<span id="show2" >登录</span>
+</div>
+<div id="register">
+  <input type="text" class="icon" name="icon" for="reservation" placeholder="   姓名"/><br>
+  <input type="text" class="icon" name="icon" for="reservation" placeholder="   手机号/仅支持中国大陆"/><br>
+  <input type="text" class="icon" name="icon" for="reservation" placeholder="   密码(请输入至少6位)"/><br><br>
+ 
+ 
+	<input type="button" class="button button1" value="注册知乎"><br><br>
+
+     <a style=" font-size: 14px;color:#808080; font-family:"Times New Roman"  >点击「注册」按钮，即代表你同意
+	 <a href="https://www.zhihu.com/terms" style=" text-decoration:none;  color:#55abed;font-size: 14px;">
+	 《知乎协议》</a> </a><br><br><br>
+		<input type="button" class="button button2 " id="b2" value="下载知乎app">
+<div class="ui-dialog" id="show4">
+	<div class="ui-dialog-content">
+		<img src="yamzhengma.jpg">
+	</div>
+</div>
+</div>
+ 
+ 
+ <div id="login">
+ <input type="text" class="icon" name="icon" for="reservation" placeholder=" 手机号或邮箱"/><br>
+  <input type="text" class="icon" name="icon" for="reservation" placeholder="  密码"/><br><br>
+<!--第一个界面需要显示的表格-->
+ <input type="button" id="b4" class="button button3" value="登录"> 
+ 
+ <br><br>
+
+    <a style="text-decoration:none;color:#2a78dc;font-size: 14px;">手机验证码登录</a>
+    &nbsp &nbsp &nbsp &nbsp 
+    <a href="http://www.baidu.com" style=" text-decoration:none; font-size: 14px;color:#808080; font-family:"Times New Roman" >无法登录</a>
+	<br><br>
+      <div id="qq" style=" font-size: 14px;color:#808080; font-family:"Times New Roman" >社交账户登录</div>
+	  <div id="show3"> &nbsp  &nbsp 
+		<a href="http://connect.qq.com/" style="text-decoration:none;"><img border="0"  src="qq.png" id="image"> </a> &nbsp  &nbsp  &nbsp 
+		<a href="http://connect.qq.com/" style="text-decoration:none;"><img border="0" src="weixin.png" id="image"></a> &nbsp  &nbsp  &nbsp 
+		<a href="http://connect.qq.com/" style="text-decoration:none;"><img border="0" src="xinlang.png" id="image"> </a>
+		</div> 
+ <br>  <br> 
+ <div>
+		<input type="button" class="button button2 " id="b3" value="下载知乎app">
+		<div class="ui-dialog" id="show5">
+		<div class="ui-dialog-content">
+		<img src="yamzhengma.jpg">
+	</div>
+</div>
+</div>
+ </div>
+<div>
+  <a id="bottom">© 2017 知乎 · 知乎圆桌 · 发现 · 移动应用 · 使用机构帐号登录 · 联系我们 · 来知乎工作 <br>
+京 ICP 证 110745 号 · 京公网安备 11010802010035 号 · 出版物经营许可证</a>
+ </div>
+<canvas id="myCanvas"></canvas>
+
+</body>
+		<script type="text/javascript" src="bg.js" charset="utf-8"></script>
+</html>
+

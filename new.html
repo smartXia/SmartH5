@@ -1,0 +1,37 @@
+<html>
+<head><meta charset="utf-8"> 
+<script src="jquery-3.2.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#show1").click(function(){
+	  $("#show1").toggleClass("important")
+	  $("#show2").removeClass("important")
+  });
+});
+$(document).ready(function(){
+  $("#show2").click(function(){
+     $("#show1").removeClass("important")
+	 $("#show2").toggleClass("important");
+  });
+});
+</script>
+<style>
+.important
+{
+ padding-bottom:5px;
+ font-family: "微软雅黑";
+ color: #666666;
+ font-size: 20px;
+ border-bottom:3px solid #0f88eb; 
+ color:#0f88eb
+}
+
+</style>
+</head>
+<body>
+<span id="show1">注册</span> 
+<span id="show2">登录</span> 
+
+</body>
+</html>
